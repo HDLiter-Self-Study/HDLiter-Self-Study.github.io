@@ -1,4 +1,0 @@
----
-title: Self-Learning Homepage
----
-
