@@ -1,11 +1,37 @@
+# --- Quartz 系统文件 (不需要同步) ---
+# Node.js 依赖包 (体积巨大，必须忽略)
+node_modules/
+
+# Quartz 构建生成的静态网页目录 (我们只同步源码，构建由 GitHub Actions 或本地完成)
+public/
+
+# Quartz 的构建缓存
+.quartz-cache/
+
+# --- 操作系统垃圾文件 ---
 .DS_Store
-.gitignore
-node_modules
-public
-prof
-tsconfig.tsbuildinfo
-.obsidian
-.quartz-cache
-private/
-.replit
-replit.nix
+Thumbs.db
+*.swp
+
+# --- Obsidian 配置 (关键部分) ---
+# 忽略 Obsidian 的工作区状态 (比如你打开了哪些面板、滚动条位置等)
+# 如果不忽略这些，每次你动一下界面，Git 都会提示有文件变更，非常烦人。
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# 忽略 Obsidian 的内部缓存
+.obsidian/cache
+.obsidian/cache.json
+
+# --- 选项：是否同步插件和外观？ ---
+# 如果你想同步你的主题、插件设置，请保留 .obsidian 文件夹的其他内容。
+# 如果你只想同步文章内容，不想同步插件配置，取消下面这行的注释：
+# .obsidian/
+
+# --- 其他 ---
+# 忽略 npm 的报错日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
