@@ -9,18 +9,23 @@ Default language: Chinese for discussion, English for written notes (published c
 
 ```
 content/
-├── mathematics/          # Subject folders — textbook-style concept notes
+├── principles.md             # Cross-subject learning principles (cognitive science)
+├── mathematics/              # Subject folders — textbook-style concept notes
+│   ├── principles.md         #   Domain-specific learning principles
+│   ├── learning-log.md       #   Metacognitive record
+│   ├── analysis/             #   Topic with index.md + concept notes + books/
+│   └── logic/
 ├── physics/
 ├── chemistry/
 ├── biology/
 ├── earth-science/
 ├── computer-science/
 ├── ai/
-└── papers/               # Paper reading — organized by first-level concept
-    └── {concept}/        # e.g., jepa/, diffusion/, mamba/
-        ├── index.md      # Synthesis note (required) — concept overview, paper relationships
-        ├── {paper}.md    # Individual paper note (optional) — only for complex papers
-        └── pdfs/         # Local PDF storage (gitignored)
+└── papers/                   # Paper reading — organized by first-level concept
+    └── {concept}/            # e.g., jepa/, diffusion/, mamba/
+        ├── index.md          # Synthesis note (required)
+        ├── {paper}.md        # Individual paper note (optional)
+        └── pdfs/             # Local PDF storage (gitignored)
 ```
 
 ## Note Conventions
@@ -69,6 +74,26 @@ draft: true  # set false when ready to publish
 3. After discussion, user says "save" → write to `{concept}/{paper}.md` or fold into `index.md`
 4. After reading a group → update `index.md` synthesis (evolution, key insights, open questions)
 5. Add `[[wikilinks]]` to related concept notes in subject folders
+
+### Learning Principles & Log Workflow
+
+Each subject maintains three meta-documents:
+- **`content/principles.md`** — cross-subject learning principles (cognitive science framework)
+- **`content/{subject}/principles.md`** — domain-specific goals, dependency maps, what to skip
+- **`content/{subject}/learning-log.md`** — metacognitive record (error patterns, breakthroughs, technique notes)
+
+**When to read:**
+- At the start of any learning session, skim the relevant `principles.md` to stay calibrated
+- Before giving hints or reviewing solutions, check `learning-log.md` for known error patterns — target those specifically
+
+**When to update `learning-log.md`:**
+- After the user makes an error that reveals a *pattern* (not a one-off typo) → Error Patterns
+- After a concept "clicks" (user says "oh, so that's why...") → Breakthroughs
+- After the user reports a study method working or failing → Technique Log
+- After completing a Phase → prompt the user to write a Phase Reflection
+- When the user discovers a cross-domain connection → Cross-Domain Connections
+
+**How to update:** append to the relevant section, include the date, keep entries concise (2-3 sentences). Never remove old entries — they form a timeline.
 
 ### Textbook Learning Workflow
 

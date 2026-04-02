@@ -11,7 +11,7 @@ draft: false
 
 ## Overview
 
-A review of single-variable real analysis, combining textbook study with formal verification in Lean 4.
+A review of real analysis (single-variable through multivariable), combining textbook study with formal verification in Lean 4.
 
 ## Resources
 
@@ -27,6 +27,12 @@ A review of single-variable real analysis, combining textbook study with formal 
 - **Hairer & Wanner, *Analysis by Its History*** — companion reading for historical context and visual intuition.
 - **Francis Su's lectures** (Harvey Mudd, YouTube) — on-demand when a proof or concept remains unclear after reading.
 - **Kontorovich's lecture notes** — Socratic dialogues auto-generated from the Lean game, available at the [course page](https://alexkontorovich.github.io/2025F311H/).
+
+### Multivariable Analysis
+- **James Munkres, *Analysis on Manifolds*** — standard self-study text for multivariable analysis. Covers R^n differentiation, inverse/implicit function theorems, multiple integrals, differential forms, Stokes' theorem. More detailed and friendlier than Spivak.
+- **Tao, *Analysis II* (4th ed.)** — already in collection; latter chapters cover multivariable differentiation and Lebesgue measure.
+- **Ted Shifrin, Multivariable Mathematics** (UGA) — two-semester YouTube lecture series covering linear algebra + multivariable calculus + differential forms + Stokes' theorem. The most complete video resource available for this material.
+- *Spivak, Calculus on Manifolds* — classic but very terse (~150 pp); better as a second pass than a first read.
 
 ### Reference
 - Kontorovich, "The Shape of Math to Come" ([arXiv:2510.15924](https://arxiv.org/abs/2510.15924)) — pedagogical rationale for formal analysis teaching.
@@ -55,11 +61,23 @@ The structure follows Abbott's chapters. Each topic becomes one or more concept 
 | 7 | Sequences and series of functions | Ch. 6 | Worlds 36–40 | |
 | 8 | The Riemann integral | Ch. 7 | Worlds 41–44 | |
 
-### Phase 4 (Optional): Beyond Abbott
-| # | Topic | Source | Notes |
-|---|-------|--------|-------|
-| 9 | Metric spaces | Tao II / Rudin | Generalize Phase 1–2 results |
+### Phase 4: Metric Spaces and Fourier Series
+| # | Topic | Source | Concept Notes |
+|---|-------|--------|---------------|
+| 9 | Metric spaces | Tao II / Rudin | Generalize Phase 1–2 results to abstract setting |
 | 10 | Fourier series | Abbott Ch. 8 / Tao II | |
+
+### Phase 5: Multivariable Analysis
+| # | Topic | Munkres | Tao II | Concept Notes |
+|---|-------|---------|--------|---------------|
+| 11 | R^n topology, linear maps | Ch. 1–3 | | |
+| 12 | Differentiation in R^n, chain rule | Ch. 4 | Ch. 17 | |
+| 13 | Inverse function theorem | Ch. 5 | Ch. 17 | |
+| 14 | Implicit function theorem | Ch. 5 | Ch. 17 | |
+| 15 | Multiple integrals, Fubini's theorem | Ch. 6 | Ch. 18 | |
+| 16 | Change of variables | Ch. 6 | Ch. 18 | |
+| 17 | Differential forms and wedge product | Ch. 7 | | |
+| 18 | Integration of forms, Stokes' theorem | Ch. 8 | | |
 
 ## Progress
 
@@ -68,4 +86,5 @@ The structure follows Abbott's chapters. Each topic becomes one or more concept 
 - [ ] Phase 1: Foundations
 - [ ] Phase 2: Topology and Continuity
 - [ ] Phase 3: Calculus Made Rigorous
-- [ ] Phase 4: Beyond Abbott
+- [ ] Phase 4: Metric Spaces and Fourier Series
+- [ ] Phase 5: Multivariable Analysis
