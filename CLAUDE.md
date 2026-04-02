@@ -11,9 +11,11 @@ Default language: Chinese for discussion, English for written notes (published c
 content/
 ├── mathematics/          # Subject folders — textbook-style concept notes
 ├── physics/
+├── chemistry/
+├── biology/
+├── earth-science/
+├── computer-science/
 ├── ai/
-├── psychology/
-├── creative-writing/
 └── papers/               # Paper reading — organized by first-level concept
     └── {concept}/        # e.g., jepa/, diffusion/, mamba/
         ├── index.md      # Synthesis note (required) — concept overview, paper relationships
@@ -48,6 +50,12 @@ draft: true  # set false when ready to publish
 - Code blocks: syntax-highlighted (shiki, GitHub theme)
 
 ## Interaction Principles
+
+### Research & References
+- Proactively search the web for papers, authoritative resources, and up-to-date information when discussing concepts
+- Prefer primary sources: arXiv papers, official course pages, textbook errata, author blogs
+- When recommending resources, verify URLs are accessible before sharing
+- Cross-reference multiple sources to ensure accuracy — don't rely on a single blog post
 
 ### Teaching Style
 - Explain with intuition first, formalism second
