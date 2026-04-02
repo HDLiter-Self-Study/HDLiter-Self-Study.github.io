@@ -29,6 +29,10 @@ Thumbs.db
 # 如果你只想同步文章内容，不想同步插件配置，取消下面这行的注释：
 # .obsidian/
 
+# --- 论文/教材 (二进制大文件，不提交) ---
+content/**/pdfs/
+content/**/books/
+
 # --- 其他 ---
 # 忽略 npm 的报错日志
 npm-debug.log*
