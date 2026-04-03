@@ -9,31 +9,10 @@
       "WebSearch",
       "WebFetch",
       "Agent",
-      "Bash(npx quartz *)",
-      "Bash(npm run *)",
-      "Bash(git *)",
-      "Bash(ls *)",
-      "Bash(find *)",
-      "Bash(cat *)",
-      "Bash(mkdir *)",
-      "Bash(cp *)",
-      "Bash(mv *)",
-      "Bash(curl *)"
+      "Bash"
     ],
     "additionalDirectories": [
       "D:\\E-Books"
-    ]
-  },
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "prompt",
-            "prompt": "The user just finished a session in a self-learning vault covering mathematics, physics, chemistry, biology, earth science, CS, and AI. Review the conversation and determine: (1) Did the user make an error revealing a recurring PATTERN (not a one-off typo)? (2) Did the user have a breakthrough or 'aha moment'? (3) Did the user report a study method working or failing? (4) Did the user discover a cross-domain connection? If ANY are true, output JSON: {\"hookSpecificOutput\":{\"hookEventName\":\"Stop\",\"additionalContext\":\"UPDATE_LEARNING_LOG: [subject] - [brief description of what to log]\"}}. If none apply, output: {\"decision\":\"allow\"}"
-          }
-        ]
-      }
     ]
   }
 }

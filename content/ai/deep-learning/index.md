@@ -20,7 +20,7 @@ Prerequisites: [[ai/machine-learning/index|ML theory]] (at least Phase 1-2) + [[
 ### Theory
 - **Bach, *Learning Theory from First Principles*** (2024) — rigorous: ERM, kernels, overparameterization, implicit bias. [Free PDF](https://www.di.ens.fr/~fbach/ltfp_book.pdf).
 - **Roberts, Yaida, Hanin, *The Principles of Deep Learning Theory*** (2022) — statistical mechanics approach: Gaussian processes, 1/n expansions, effective theory of deep networks. Requires comfort with statistical physics. [arXiv preprint](https://arxiv.org/abs/2106.10165).
-- **Telgarsky, *Deep Learning Theory*** — lecture notes: approximation, optimization landscape, generalization. [Free](https://mjt.cs.illinois.edu/dlt/).
+- **Telgarsky, *Deep Learning Theory*** — online lecture notes (web format, not PDF): approximation, optimization landscape, generalization. [Website](https://mjt.cs.illinois.edu/dlt/).
 - **Stanford CS229M / STATS214** (Tengyu Ma) — NTK, implicit regularization, non-convex optimization. [Lecture notes](https://web.stanford.edu/class/stats214/).
 
 ### Textbooks (Modern)
