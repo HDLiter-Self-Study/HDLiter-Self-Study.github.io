@@ -20,9 +20,15 @@ Prerequisites: [[mathematics/analysis/index|real analysis]] (especially Phase 4:
 
 ### Review (undergraduate refresh)
 - **Blitzstein & Hwang, *Introduction to Probability* (2nd ed.)** — excellent motivation, rich examples. Pair with [Harvard Stat 110 YouTube lectures](https://www.youtube.com/playlist?list=PL2SOU6wwxB0uwwH80KTQ6ht66KWxbzTIo) at 1.5–2x speed for fast review.
+- **Bertsekas & Tsitsiklis, *Introduction to Probability* (2nd ed.)** — MIT 6.041 textbook, more compact and engineering-flavored. Alternative to Blitzstein for review.
 
 ### Primary (measure-theoretic)
 - **Williams, *Probability with Martingales*** — concise (~250 pp), builds measure theory and probability together, reaches martingales quickly. Best transition from analysis to probability for self-study.
+
+### Statistical Inference
+- **Wasserman, *All of Statistics*** — one-volume graduate statistics: MLE, hypothesis testing, Bayesian inference, regression, causal inference. Bridge between probability theory and ML.
+- **Wasserman, *All of Nonparametric Statistics*** — kernel density estimation, minimax theory, high-dimensional inference. Advanced reference for Phase 4.
+- **Wainwright, *High-Dimensional Statistics*** — concentration inequalities, random matrices, minimax lower bounds. The mathematical machinery behind modern generalization bounds.
 
 ### Reference
 - **Durrett, *Probability: Theory and Examples* (5th ed.)** — standard graduate text, covers more ground (Markov chains, ergodic theory). Free PDF from author. Solutions manual available.
@@ -77,12 +83,25 @@ Organized by concept. Phase 0 is review; Phases 1–3 are new material.
 | 23 | Uniform integrability | Ch. 12 | Ch. 5 | |
 | 24 | Radon-Nikodym theorem and density | Ch. 14 | Ch. 5 | |
 
-### Phase 4 (Future): Toward ML Theory
+### Phase 4: Statistical Inference
+| # | Concept | Sources | Concept Notes |
+|---|---------|---------|---------------|
+| 25 | Point estimation: MLE, method of moments, Bayesian estimation | Wasserman AoS Ch. 9 | |
+| 26 | Properties of estimators: consistency, efficiency, sufficiency | Wasserman AoS Ch. 9–10 | |
+| 27 | Hypothesis testing: Neyman-Pearson, likelihood ratio, p-values | Wasserman AoS Ch. 10 | |
+| 28 | Confidence intervals and asymptotic inference | Wasserman AoS Ch. 11 | |
+| 29 | Bayesian inference: priors, posteriors, credible intervals | Wasserman AoS Ch. 12 | Links to [[ai/machine-learning/index|ML Phase 4]] |
+| 30 | Regression and linear models (statistical perspective) | Wasserman AoS Ch. 13 | |
+| 31 | Nonparametric density estimation and kernel methods | Wasserman AoNS Ch. 6 | |
+| 32 | Minimax theory and lower bounds | Wasserman AoNS Ch. 7, Wainwright | |
+
+### Phase 5 (Future): Toward ML Theory
 | # | Concept | Source | Concept Notes |
 |---|---------|--------|---------------|
-| 25 | Markov chains | Durrett Ch. 6 | |
-| 26 | Concentration inequalities (Hoeffding, McDiarmid) | Speciality texts | |
-| 27 | Empirical processes, VC dimension | → statistical learning theory | |
+| 33 | Markov chains | Durrett Ch. 6 | |
+| 34 | Concentration inequalities (Hoeffding, McDiarmid, sub-Gaussian) | Wainwright Ch. 2 | |
+| 35 | Random matrices and covariance estimation | Wainwright Ch. 6 | |
+| 36 | Empirical processes, VC dimension | Wainwright Ch. 4, → [[ai/machine-learning/index|ML theory]] | |
 
 ## AI Relevance
 
@@ -94,7 +113,10 @@ Organized by concept. Phase 0 is review; Phases 1–3 are new material.
 | Conditional expectation | Foundation of Bayesian inference, regression = E[Y\|X] |
 | Martingales | Online learning, stochastic optimization convergence proofs |
 | Radon-Nikodym | Density ratios, importance sampling, KL divergence |
+| MLE, Bayesian estimation | Every parametric model in ML |
+| Minimax theory | Optimal rates, fundamental limits of learning |
 | Concentration inequalities | Generalization bounds, PAC learning |
+| Nonparametric methods | Kernel density estimation, kNN consistency |
 
 ## Progress
 
@@ -102,4 +124,5 @@ Organized by concept. Phase 0 is review; Phases 1–3 are new material.
 - [ ] Phase 1: Measure-Theoretic Foundations
 - [ ] Phase 2: Limit Theorems
 - [ ] Phase 3: Conditional Expectation and Martingales
-- [ ] Phase 4: Toward ML Theory
+- [ ] Phase 4: Statistical Inference
+- [ ] Phase 5: Toward ML Theory
