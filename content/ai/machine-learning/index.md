@@ -125,17 +125,6 @@ Phase 3 (methods) ← ESL + PRML in parallel, by concept
 
 Phases 3 and 4 can be interleaved. Phase 5 can start as soon as Phase 2 is done.
 
-## Books to Acquire (Free)
-
-All high-priority books are freely available as PDF:
-- [x] ESL (owned, paper)
-- [x] PRML (owned, paper)
-- [x] MacKay (owned, digital)
-- [ ] UML — [free PDF](https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf)
-- [ ] Murphy vol 1+2 — [free PDFs](https://probml.github.io/pml-book/)
-- [ ] Mohri et al. — [free PDF](https://cs.nyu.edu/~mohri/mlbook/)
-- [ ] Wainwright — not free, acquire when needed
-
 ## Progress
 
 - [ ] Phase 1: What Does It Mean to Learn?
