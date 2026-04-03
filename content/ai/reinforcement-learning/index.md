@@ -1,5 +1,5 @@
 ---
-title: Reinforcement Learning — Learning Roadmap
+title: Reinforcement Learning
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:

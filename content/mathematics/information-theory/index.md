@@ -1,5 +1,5 @@
 ---
-title: Information Theory — Learning Roadmap
+title: Information Theory
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:

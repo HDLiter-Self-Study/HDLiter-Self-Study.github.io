@@ -1,5 +1,5 @@
 ---
-title: Set Theory & Mathematical Logic — Learning Roadmap
+title: Set Theory & Logic
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Deep Learning — Learning Roadmap
+title: Deep Learning
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:

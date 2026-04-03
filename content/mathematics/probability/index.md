@@ -1,5 +1,5 @@
 ---
-title: Probability Theory — Learning Roadmap
+title: Probability Theory
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:

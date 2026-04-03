@@ -1,5 +1,5 @@
 ---
-title: Linear Algebra (Theoretical) — Learning Roadmap
+title: Linear Algebra
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Real Analysis — Learning Roadmap
+title: Real Analysis
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:

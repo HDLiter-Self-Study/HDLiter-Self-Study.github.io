@@ -1,5 +1,5 @@
 ---
-title: Machine Learning Theory — Learning Roadmap
+title: Machine Learning
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:

@@ -1,5 +1,5 @@
 ---
-title: AI Self-Learning
+title: Artificial Intelligence
 date: 2026-04-02
 lastmod: 2026-04-02
 tags:
