@@ -15,7 +15,13 @@ Domain-specific principles for finance. See [[principles|general learning princi
 ```
 Macroeconomics (credit cycles, monetary policy, cross-asset)
   │
+  ├── Political economy (why policies are what they are)
+  │
   ├── Market Foundations (microstructure, asset classes, risk)
+  │     │
+  │     ├── Incentives & game theory (market participant behavior)
+  │     │
+  │     ├── Cognitive biases (when and why markets are irrational)
   │     │
   │     ├── Financial Time Series / Econometrics
   │     │     │
@@ -43,6 +49,12 @@ Macroeconomics (credit cycles, monetary policy, cross-asset)
 ### Domain first, model second
 The most common failure mode in quantitative finance: building a sophisticated model on top of a misunderstanding of what the data represents. Before writing any code, ask: *what economic mechanism would cause this signal to exist, and why hasn't it been arbitraged away?*
 
+### Think in incentives, not events
+News says "Fed raises rates." A naive model encodes the event. A better question: *what were the Fed's incentives? Was this move priced in? Who is hurt, who benefits, and what will they do next?* Every market movement is the result of agents acting on incentives under constraints. Game-theoretic reasoning — commitment, signaling, repeated interaction — is more durable than memorizing "rate hikes → stocks down."
+
+### Know when rationality breaks
+Markets are mostly efficient, but systematically inefficient at specific points: when participants are loss-averse (prospect theory), when they anchor to irrelevant numbers, when they extrapolate recent trends (recency bias), when herding dominates. These are not random failures — they are predictable patterns rooted in cognitive biases. The value of behavioral economics is not "markets are irrational" but "markets are irrational *in specific, exploitable ways*."
+
 ### Adversarial data environment
 Financial data is fundamentally different from natural science data:
 - **Non-stationary** — the distribution shifts because markets adapt
@@ -65,9 +77,16 @@ Strategies have a shelf life. A published signal loses potency as more people tr
 
 ## What to Skip
 
-- **Options pricing theory (Black-Scholes, Greeks in depth)** — unless you're specifically trading options. Know the intuition, skip the stochastic calculus derivations for now.
-- **Accounting/financial statements deep dive** — LLMs can extract this information. Understand the key metrics (P/E, debt/equity, free cash flow) but don't become an accountant.
-- **Proprietary trading firm interview prep (brain teasers, mental math)** — not relevant to Bridgewater's style, which emphasizes thinking frameworks over speed.
+**Technical execution (AI-replaceable or not on your path):**
+- **Accounting/financial statements deep dive** — LLMs can extract this. Know the key metrics, don't become an accountant.
+- **Options pricing theory (Black-Scholes, Greeks in depth)** — unless specifically trading options. Know the intuition, skip the derivations.
+- **Supply-demand curve computation, consumer/producer surplus** — microeconomics textbook exercises. The *thinking* (incentives, equilibrium) matters; the *calculation* doesn't.
+- **Proprietary trading firm interview prep (brain teasers, mental math)** — not Bridgewater's style.
+
+**Entire subfields not relevant to your direction:**
+- **Labor economics, industrial organization** — applied micro subfields, too specialized.
+- **International trade theory** — comparative advantage, Heckscher-Ohlin. Academic; the actually useful parts (exchange rates, capital flows) are already in Phase 1.
+- **Corporate finance** — DCF, WACC, capital structure. You're doing macro + systematic, not equity fundamental analysis.
 - **Crypto-specific protocols** — unless your project scope includes crypto markets.
 
 ## Bridgewater-Specific Context
