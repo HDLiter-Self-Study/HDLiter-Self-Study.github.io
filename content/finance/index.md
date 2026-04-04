@@ -28,6 +28,13 @@ See [[finance/principles|Finance Learning Principles]] for domain-specific metho
 | **Mishkin, *The Economics of Money, Banking, and Financial Markets*** (13th ed.) | Textbook | Monetary policy transmission, central banking, financial crises | `books/` |
 | **Perez, *Technological Revolutions and Financial Capital*** (2002) | Book | Tech revolution cycles and financial capital: bubble → crash → golden age. AI as current cycle | `books/` |
 
+### Economic Thinking
+| Resource | Type | Focus | Available? |
+|----------|------|-------|------------|
+| **Varian, *Intermediate Microeconomics*** (9th ed.) | Textbook | Incentives, game theory, information asymmetry, mechanism design — read selectively | Buy or reference |
+| **Kahneman, *Thinking, Fast and Slow*** (2011) | Book | Systematic cognitive biases: prospect theory, framing, overconfidence, anchoring | Buy |
+| **Acemoglu & Robinson, *Why Nations Fail*** (2012) | Book | Institutions as drivers of economic outcomes — complements Dalio's macro framework | Buy |
+
 ### Market Microstructure & Trading
 | Resource | Type | Focus | Available? |
 |----------|------|-------|------------|
@@ -86,56 +93,61 @@ See [[finance/principles|Finance Learning Principles]] for domain-specific metho
 | 4 | Inflation: causes, measurement, central bank response | Mankiw / Mishkin | |
 | 5 | Currency and balance of payments: exchange rates, capital flows | Mankiw, Dalio World Order | |
 | 6 | Cross-asset macro relationships: rates ↔ FX ↔ commodities ↔ equities | Dalio Big Debt Crises, Bridgewater research | |
-| 7 | Historical crises as case studies: 2008, 1997 Asia, 1930s | Dalio Big Debt Crises | |
+| 7 | Political incentives and policy formation: why central banks, governments, and regulators act the way they do | Acemoglu, Dalio World Order | |
+| 8 | Technology-capital cycles: bubble → crash → golden age → maturity. AI as current cycle | Perez | |
+| 9 | Historical crises as case studies: 2008, 1997 Asia, 1930s | Dalio Big Debt Crises | |
 
 ### Phase 2: Market Foundations
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 8 | Asset classes: equities, fixed income, FX, commodities — what drives each | MIT 15.401, Harris | |
-| 9 | Market microstructure: order books, bid-ask spread, liquidity, market impact | Harris Ch. 1-12 | |
-| 10 | Efficient market hypothesis and its limits | MIT 15.401, Shiller | |
-| 11 | Risk and return: volatility, drawdown, Sharpe ratio, fat tails | Cochrane Asset Pricing Ch. 1 | |
-| 12 | Factor models: CAPM, Fama-French, momentum, quality | Cochrane Asset Pricing | |
-| 13 | Portfolio construction: mean-variance, risk parity, Kelly criterion | Cochrane, De Prado MLA | |
+| 10 | Asset classes: equities, fixed income, FX, commodities — what drives each | MIT 15.401, Harris | |
+| 11 | Market microstructure: order books, bid-ask spread, liquidity, market impact | Harris Ch. 1-12 | |
+| 12 | Incentives and information asymmetry: adverse selection, moral hazard, signaling — why market participants behave the way they do | Varian (selected chapters) | |
+| 13 | Game-theoretic reasoning: Nash equilibrium, repeated games, mechanism design — central bank vs. market as a repeated game | Varian (selected chapters) | |
+| 14 | Efficient market hypothesis and its limits | MIT 15.401, Shiller | |
+| 15 | Systematic cognitive biases: prospect theory, loss aversion, overconfidence, anchoring — when and why markets are irrational | Kahneman, Shiller | |
+| 16 | Risk and return: volatility, drawdown, Sharpe ratio, fat tails | Cochrane Asset Pricing Ch. 1 | |
+| 17 | Factor models: CAPM, Fama-French, momentum, quality | Cochrane Asset Pricing | |
+| 18 | Portfolio construction: mean-variance, risk parity, Kelly criterion | Cochrane, De Prado MLA | |
 
 ### Phase 3: Financial Time Series
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 14 | Stationarity, unit roots, and differencing | Tsay Ch. 2, Hamilton | |
-| 15 | ARIMA models and forecasting | Tsay Ch. 2 | |
-| 16 | Volatility modeling: ARCH, GARCH, stochastic volatility | Tsay Ch. 3 | |
-| 17 | Multivariate time series: VAR, cointegration, error correction | Tsay Ch. 8, Hamilton | |
-| 18 | Regime switching and structural breaks | Hamilton Ch. 22, Tsay Ch. 4 | |
-| 19 | Non-i.i.d. reality: why standard ML cross-validation fails on financial data | De Prado AFML Ch. 7 | |
+| 19 | Stationarity, unit roots, and differencing | Tsay Ch. 2, Hamilton | |
+| 20 | ARIMA models and forecasting | Tsay Ch. 2 | |
+| 21 | Volatility modeling: ARCH, GARCH, stochastic volatility | Tsay Ch. 3 | |
+| 22 | Multivariate time series: VAR, cointegration, error correction | Tsay Ch. 8, Hamilton | |
+| 23 | Regime switching and structural breaks | Hamilton Ch. 22, Tsay Ch. 4 | |
+| 24 | Non-i.i.d. reality: why standard ML cross-validation fails on financial data | De Prado AFML Ch. 7 | |
 
 ### Phase 4: Systematic Strategies & Backtesting
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 20 | Signal construction: from raw data to tradeable feature | De Prado AFML Ch. 2-5 | |
-| 21 | Labeling: fixed-horizon, triple-barrier, meta-labeling | De Prado AFML Ch. 3-4 | |
-| 22 | Feature importance and selection for financial data | De Prado AFML Ch. 6, 8 | |
-| 23 | Backtesting: walk-forward, combinatorial purged CV, avoiding biases | De Prado AFML Ch. 7, 9-12 | |
-| 24 | Execution: slippage, market impact, transaction costs | Harris, Narang | |
-| 25 | Strategy evaluation: Sharpe, Calmar, deflated Sharpe ratio | De Prado AFML Ch. 11 | |
+| 25 | Signal construction: from raw data to tradeable feature | De Prado AFML Ch. 2-5 | |
+| 26 | Labeling: fixed-horizon, triple-barrier, meta-labeling | De Prado AFML Ch. 3-4 | |
+| 27 | Feature importance and selection for financial data | De Prado AFML Ch. 6, 8 | |
+| 28 | Backtesting: walk-forward, combinatorial purged CV, avoiding biases | De Prado AFML Ch. 7, 9-12 | |
+| 29 | Execution: slippage, market impact, transaction costs | Harris, Narang | |
+| 30 | Strategy evaluation: Sharpe, Calmar, deflated Sharpe ratio | De Prado AFML Ch. 11 | |
 
 ### Phase 5: LLM + Finance
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 26 | Financial text sources: earnings calls, SEC filings, news, social media | Survey papers | |
-| 27 | Sentiment extraction: lexicon-based vs. LLM-based, domain calibration | FinBERT paper, project experience | |
-| 28 | Event extraction: what happened, to whom, expected impact | Project experience | |
-| 29 | LLM as macro analyst: summarizing Fed minutes, interpreting policy signals | Project experience | |
-| 30 | Signal evaluation: is the text-derived signal actually predictive? | De Prado AFML methodology | |
-| 31 | Combining text signals with quantitative signals | De Prado MLA, project experience | |
+| 31 | Financial text sources: earnings calls, SEC filings, news, social media | Survey papers | |
+| 32 | Sentiment extraction: lexicon-based vs. LLM-based, domain calibration | FinBERT paper, project experience | |
+| 33 | Event extraction: what happened, to whom, expected impact | Project experience | |
+| 34 | LLM as macro analyst: summarizing Fed minutes, interpreting policy signals | Project experience | |
+| 35 | Signal evaluation: is the text-derived signal actually predictive? | De Prado AFML methodology | |
+| 36 | Combining text signals with quantitative signals | De Prado MLA, project experience | |
 
 ### Phase 6: Causal Inference for Finance
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 32 | Potential outcomes framework and counterfactuals | Angrist & Pischke / Cunningham | |
-| 33 | Instrumental variables | Angrist & Pischke | |
-| 34 | Regression discontinuity and difference-in-differences | Cunningham | |
-| 35 | Granger causality vs. true causality | Hamilton, Tsay | |
-| 36 | Causal reasoning for robust signal construction | Pearl (light), project experience | |
+| 37 | Potential outcomes framework and counterfactuals | Angrist & Pischke / Cunningham | |
+| 38 | Instrumental variables | Angrist & Pischke | |
+| 39 | Regression discontinuity and difference-in-differences | Cunningham | |
+| 40 | Granger causality vs. true causality | Hamilton, Tsay | |
+| 41 | Causal reasoning for robust signal construction | Pearl (light), project experience | |
 
 ## Suggested Sequencing
 
