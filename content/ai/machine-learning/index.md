@@ -77,7 +77,7 @@ Organized by fundamental questions, not by book chapter. Each concept draws from
 | 11 | Linear regression (frequentist and Bayesian) | ESL Ch. 3, PRML Ch. 3 | |
 | 12 | Linear classification, logistic regression | ESL Ch. 4, PRML Ch. 4 | |
 | 13 | Support vector machines and maximum margin | UML Ch. 15, ESL Ch. 12, Caltech lec 14 | |
-| 14 | Kernel trick, Mercer's theorem, RKHS | PRML Ch. 6, Bach Ch. 5 | Links to [[mathematics/probability/index|functional analysis]] |
+| 14 | Kernel trick, Mercer's theorem, RKHS | PRML Ch. 6, Bach Ch. 5 | Links to [[mathematics/analysis/index|functional analysis]] |
 | 15 | Ensemble methods: bagging, boosting, random forests | ESL Ch. 10, 15–16, UML Ch. 10 | |
 
 ### Phase 4: Probabilistic Models

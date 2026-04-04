@@ -31,7 +31,7 @@ Macroeconomics (credit cycles, monetary policy, cross-asset)
   │     │
   │     └── Portfolio Construction & Risk Management
   │
-  └── Causal Inference for Finance
+  └── Causal Inference for Finance (diagnostic tool, not alpha generator)
 ```
 
 ### Cross-references
@@ -52,8 +52,10 @@ The most common failure mode in quantitative finance: building a sophisticated m
 ### Think in incentives, not events
 News says "Fed raises rates." A naive model encodes the event. A better question: *what were the Fed's incentives? Was this move priced in? Who is hurt, who benefits, and what will they do next?* Every market movement is the result of agents acting on incentives under constraints. Game-theoretic reasoning — commitment, signaling, repeated interaction — is more durable than memorizing "rate hikes → stocks down."
 
-### Know when rationality breaks
-Markets are mostly efficient, but systematically inefficient at specific points: when participants are loss-averse (prospect theory), when they anchor to irrelevant numbers, when they extrapolate recent trends (recency bias), when herding dominates. These are not random failures — they are predictable patterns rooted in cognitive biases. The value of behavioral economics is not "markets are irrational" but "markets are irrational *in specific, exploitable ways*."
+### Know when rationality breaks — and why it persists
+Markets are mostly efficient, but systematically inefficient at specific points: when participants are loss-averse (prospect theory), when they anchor to irrelevant numbers, when they extrapolate recent trends (recency bias), when herding dominates (information cascades). These are predictable patterns rooted in cognitive biases.
+
+But a bias is only exploitable if there are **structural limits to arbitrage** preventing sophisticated participants from eliminating it (Shleifer & Vishny 1997): capital constraints, career risk ("being right but early gets you fired"), short-selling costs, or liquidity constraints. Well-documented biases in large-cap liquid markets are likely already priced in. The remaining opportunities tend to be where arbitrage is structurally difficult — small-cap, distressed, illiquid, or cross-asset.
 
 ### Adversarial data environment
 Financial data is fundamentally different from natural science data:
@@ -66,11 +68,14 @@ Treat every result with suspicion. The default hypothesis is always "this is noi
 
 ### Backtesting discipline
 A backtest is not evidence — it is a hypothesis that needs out-of-sample validation. Rules:
-1. **No lookahead** — at time t, you can only use information available at time t
+1. **No lookahead** — at time t, you can only use information available at time t. This includes universe selection: don't use today's S&P 500 constituents to backtest 2010 strategies (survivorship bias)
 2. **Account for costs** — slippage, spread, market impact, borrowing costs
 3. **Walk-forward validation** — train on [0, T], test on [T, T+Δ], roll forward
-4. **Multiple testing correction** — if you tested 100 signals, some will "work" by chance
+4. **Multiple testing correction** — if you tested 100 signals, some will "work" by chance. Use deflated Sharpe ratio or BHY correction for dependent tests
 5. **Regime awareness** — a strategy that works in low-vol doesn't necessarily work in a crisis
+6. **Survivorship bias** — delisted stocks, dead funds, retracted articles must be included in the data
+7. **Backfill bias** — alternative data vendors often backfill historical data with corrections not available in real-time
+8. **No p-hacking through specification** — tweaking holding period, entry threshold, or lookback window until it "works" is overfitting to history
 
 ### The alpha decay problem
 Strategies have a shelf life. A published signal loses potency as more people trade it. Engineering knowledge in AI decays because frameworks change; alpha in finance decays because markets learn. The durable skills: understanding economic mechanisms, rigorous methodology, fast iteration.
@@ -91,10 +96,13 @@ Strategies have a shelf life. A published signal loses potency as more people tr
 
 ## Bridgewater-Specific Context
 
-Bridgewater's investment philosophy is systematic macro:
+Bridgewater runs two distinct strategies:
+- **Pure Alpha** — directional systematic macro. Takes leveraged long/short positions across asset classes based on economic thesis. This is the flagship.
+- **All Weather** — risk parity. Balances risk contributions across asset classes for all economic environments. No directional view.
+
+Core philosophy:
 - **Economic machine thinking** — every market movement has a cause rooted in credit, monetary policy, or productivity
-- **Risk parity** — balance risk across asset classes rather than allocating by capital
-- **Radical transparency / believability weighting** — investment decisions are debated openly, weighted by track record
 - **Systematization** — investment logic must be expressible as rules that a machine can execute
+- **Radical transparency / believability weighting** — this is *culture*, not investment methodology. Decisions are debated openly, weighted by track record. Relevant for interviews but distinct from the investment process.
 
 As an investment engineer, you sit at the intersection of investment logic and implementation. The job is not "build ML models" — it's "translate an economic thesis into a testable, executable system."

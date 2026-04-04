@@ -47,7 +47,7 @@ DL Theory (Phase 1)                                 Reimplement backprop,
 DL Architectures (Phase 2)                          Train CNNs/Transformers
   Convolutions, attention, transformers.            on standard benchmarks
         │                                                    │
-DL Genertic (Phase 3)                               Implement VAE / diffusion
+DL Generative (Phase 3)                             Implement VAE / diffusion
   VAE, GAN, diffusion, flows.                       from scratch
         │                                                    │
 Foundation Models (Phase 4)                         Fine-tune / build on top of
@@ -67,6 +67,8 @@ The tracks don't need to be perfectly synchronized. It's fine to be one phase ah
 ### Reproduce before extending
 The AI equivalent of "proof before reading." Before reading ablation studies or claiming to understand a method, reimplement the core algorithm and reproduce the main result (even at small scale). A surprising number of "intuitions" in the field don't survive reimplementation.
 
+When NOT to reimplement: when the value is in scale (you won't learn much reimplementing GPT-3), when the codebase itself is the contribution (large systems like Megatron — read the code instead), or when a well-tested library exists and your goal is the downstream task.
+
 ### Paper reading triage
 Not all papers deserve the same depth:
 
@@ -77,10 +79,12 @@ Not all papers deserve the same depth:
 | **Survey / tutorial** | 1–2 hours | Build a mental map of the subfield. Note what to read next |
 | **Incremental** | 15 min | Abstract + results table + figures. Move on |
 
-How to tell which is which: if three unrelated papers cite it as foundational, it's a landmark. If it introduces a name people use (ADAM, ResNet, DDPM), it's at least a key method.
+How to tell which is which: if it introduces a name practitioners use (ADAM, ResNet, DDPM), it's at least a key method. If it changes how people build systems within a year, it's a landmark. Citation count is a lagging indicator — don't rely on it for recent work.
 
-### Math first, intuition second
-AI is full of hand-wavy "intuitions" that mislead (e.g., "attention is like human attention," "dropout is like an ensemble"). The principle: **understand the mathematical mechanism, then construct your own intuition from it.** Borrowed metaphors are memory aids, not understanding.
+### Math first, intuition second (usually)
+AI is full of hand-wavy "intuitions" that mislead (e.g., "attention is like human attention," "dropout is like an ensemble"). The default: **understand the mathematical mechanism, then construct your own intuition from it.** Borrowed metaphors are memory aids, not understanding.
+
+The exception: for generative/constructive ideas (VAE, diffusion, normalizing flows), build intuition from the generative process first, *then* formalize with ELBO/SDE math. For analysis and theory (optimization, generalization), math-first is correct.
 
 ### Ablation mindset
 When studying a method, always ask: *which component is actually load-bearing?* Many papers bundle 5 tricks together. The ablation table (or your own experiment) tells you which ones matter. This skill transfers directly to debugging training runs.
