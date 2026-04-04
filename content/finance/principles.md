@@ -49,6 +49,8 @@ Macroeconomics (credit cycles, monetary policy, cross-asset)
 ### Domain first, model second
 The most common failure mode in quantitative finance: building a sophisticated model on top of a misunderstanding of what the data represents. Before writing any code, ask: *what economic mechanism would cause this signal to exist, and why hasn't it been arbitraged away?*
 
+**On Dalio's framework specifically:** Dalio's economic machine model is useful for building macro intuition quickly. Read it as a practitioner's mental model, not an empirically validated theory. Its value is in the *questions it prompts* (what phase of the credit cycle are we in? who is the marginal buyer of this debt?) rather than the *predictions it implies*. Cross-check every Dalio claim against Mishkin and academic macro before treating it as a first principle.
+
 ### Think in incentives, not events
 News says "Fed raises rates." A naive model encodes the event. A better question: *what were the Fed's incentives? Was this move priced in? Who is hurt, who benefits, and what will they do next?* Every market movement is the result of agents acting on incentives under constraints. Game-theoretic reasoning — commitment, signaling, repeated interaction — is more durable than memorizing "rate hikes → stocks down."
 
@@ -63,6 +65,7 @@ Financial data is fundamentally different from natural science data:
 - **Fat-tailed** — 6-sigma events happen far more often than Gaussian models predict
 - **Reflexive** — your model, if successful, changes the data it models
 - **Low signal-to-noise** — most apparent patterns are noise
+- **Small-T problem** — effective independent samples are scarce. A full business cycle is 7-10 years; you may observe only a handful. This fundamentally limits statistical power and is why De Prado stresses combinatorial purged CV
 
 Treat every result with suspicion. The default hypothesis is always "this is noise."
 
@@ -84,7 +87,7 @@ Strategies have a shelf life. A published signal loses potency as more people tr
 
 **Technical execution (AI-replaceable or not on your path):**
 - **Accounting/financial statements deep dive** — LLMs can extract this. Know the key metrics, don't become an accountant.
-- **Options pricing theory (Black-Scholes, Greeks in depth)** — unless specifically trading options. Know the intuition, skip the derivations.
+- **Options pricing derivations (Black-Scholes, Greeks in depth)** — unless specifically trading options. However, **implied volatility, vol surface, and variance risk premium are NOT skippable** — they are core macro signals (VIX, skew) that BW and all macro funds track. Know the signal, skip the derivation.
 - **Supply-demand curve computation, consumer/producer surplus** — microeconomics textbook exercises. The *thinking* (incentives, equilibrium) matters; the *calculation* doesn't.
 - **Proprietary trading firm interview prep (brain teasers, mental math)** — not Bridgewater's style.
 
@@ -106,3 +109,7 @@ Core philosophy:
 - **Radical transparency / believability weighting** — this is *culture*, not investment methodology. Decisions are debated openly, weighted by track record. Relevant for interviews but distinct from the investment process.
 
 As an investment engineer, you sit at the intersection of investment logic and implementation. The job is not "build ML models" — it's "translate an economic thesis into a testable, executable system."
+
+The systemization pipeline: **investment logic → rule specification → historical simulation → validation → production monitoring.** An IE contributes at every stage — from formalizing a PM's thesis into testable rules, to designing the backtest infrastructure, to monitoring live signal degradation.
+
+Technical context: BW's stack is primarily C++ and Python, with heavily self-built data infrastructure. Interviews may test system design ability (e.g., "design a backtestable signal pipeline"). As a new IE, your "believability" weight starts low — it accumulates through documented predictions and demonstrated reasoning quality.
