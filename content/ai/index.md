@@ -38,9 +38,9 @@ Probability Theory ─────┤                                    │
 Information Theory ─────┘         │                          │
                                   │                    DL Generative (Phase 3)
 Real Analysis ──→ Measure Theory ─┘                          │
-                                                       Foundation Models (Phase 4)
+                                                       Foundation Models (Phase 4) ──→ Finance (LLM + Finance)
                                                              │
 RL Foundations ──→ Deep RL ──→ RLHF ─────────────────────────┘
                                 │
-                          Finance (separate roadmap), AI for science, ...
+                          Finance (RL for portfolio), AI for science, ...
 ```

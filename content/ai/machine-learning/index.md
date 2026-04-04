@@ -47,7 +47,7 @@ Prerequisites: [[mathematics/linear-algebra/index|linear algebra]] (spectral the
 | **MIT 9.520/6.7910** | Poggio, Rosasco | Regularization theory, kernels, deep learning theory, generalization | No video | [Notes + slides](https://poggio-lab.mit.edu/9-520/) |
 | **UC Berkeley CS189/289A** | Shewchuk | Full ML course, more mathematical than CS229 | Screencasts on course site | [Lecture notes (best in class)](https://people.eecs.berkeley.edu/~jrs/189/) |
 | **Stanford CS224n** | Manning et al. | NLP with deep learning, transformers | [YouTube (2024)](https://web.stanford.edu/class/cs224n/) | Slides + assignments |
-| **Stanford CS231n** | Fei-Fei Li et al. | Deep learning for vision, CNNs | YouTube (2017) | Slides + assignments |
+
 
 ## Roadmap
 

@@ -70,12 +70,14 @@ See [[finance/principles|Finance Learning Principles]] for domain-specific metho
 |----------|------|-------|------------|
 | **Angrist & Pischke, *Mostly Harmless Econometrics*** | Textbook | IV, RDD, DID — the applied econometrics standard | `books/` |
 | **Cunningham, *Causal Inference: The Mixtape*** | Textbook | Same topics, more accessible, code examples | [Free online](https://mixtape.scunning.com/) |
+| **Pearl, *Causality*** (2nd ed.) | Textbook | Structural causal models, d-separation, do-calculus — the formal framework | Buy (Ch. 1-3 sufficient) |
+| **Campbell, Lo, MacKinlay, *The Econometrics of Financial Markets*** | Textbook | Event studies, empirical asset pricing methodology | Reference |
 
 ### Courses (all free)
 | Course | Instructor | Focus | Link |
 |--------|-----------|-------|------|
 | **Mehrling, Economics of Money and Banking** | Mehrling (Columbia) | Monetary plumbing, central bank balance sheets, shadow banking | [Coursera](https://www.coursera.org/learn/money-banking) |
-| **MIT 18.642 Math with Applications in Finance** | Various | Bond math, portfolio optimization, ML for finance | [MIT OCW (2024)](https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024/) |
+| **MIT 18.S096 Math with Applications in Finance** | Various | Bond math, portfolio optimization, ML for finance | [MIT OCW](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) |
 | **MIT 14.02 Principles of Macroeconomics** | Various | Blanchard-based macro foundation | [MIT OCW](https://ocw.mit.edu/courses/14-02-principles-of-macroeconomics-fall-2023/) |
 | **MIT 15.401 Finance Theory I** | Lo | Asset pricing, portfolio theory, CAPM, EMH | [MIT OCW](https://ocw.mit.edu/courses/15-401-finance-theory-i-fall-2008/) |
 | **Yale ECON 252 Financial Markets** | Shiller | Behavioral finance, market institutions, history | [Coursera](https://oyc.yale.edu/economics/econ-252) |
@@ -114,7 +116,7 @@ See [[finance/principles|Finance Learning Principles]] for domain-specific metho
 | 21 | Limits to arbitrage: why biases persist (capital constraints, career risk, short-selling costs) | Pedersen Ch. 4-5 | |
 | 22 | Risk and return: volatility, drawdown, Sharpe ratio, fat tails | Cochrane Asset Pricing Ch. 1, Ilmanen | |
 | 23 | Factor models: CAPM, Fama-French, momentum, quality | Cochrane Asset Pricing, Ang | |
-| 24 | Portfolio construction: mean-variance, risk parity, Kelly criterion | Ang, De Prado MLA | |
+| 24 | Portfolio construction: mean-variance, risk parity, Kelly criterion (links to [[mathematics/information-theory/index|information theory]]) | Ang, De Prado MLA | |
 
 ### Phase 3: Financial Time Series
 | # | Concept | Sources | Concept Notes |
@@ -122,7 +124,7 @@ See [[finance/principles|Finance Learning Principles]] for domain-specific metho
 | 25 | Stationarity, unit roots, and differencing | Tsay Ch. 2, Hamilton | |
 | 26 | ARIMA models and forecasting | Tsay Ch. 2, Cochrane time series notes | |
 | 27 | Volatility modeling: ARCH, GARCH, stochastic volatility | Tsay Ch. 3 | |
-| 28 | Realized volatility and high-frequency measures | Tsay Ch. 5, Andersen et al. | |
+| 28 | Realized volatility and high-frequency measures | Tsay Ch. 5 | |
 | 29 | Long memory and fractional integration (ARFIMA): why volatility is persistent | Tsay Ch. 2, Hamilton | |
 | 30 | Multivariate time series: VAR, Granger causality, cointegration, error correction | Tsay Ch. 8, Hamilton | |
 | 31 | Regime switching and structural breaks | Hamilton Ch. 22, Tsay Ch. 4 | |
@@ -145,7 +147,7 @@ See [[finance/principles|Finance Learning Principles]] for domain-specific metho
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
 | 42 | Financial text sources: earnings calls, SEC filings (10-K/10-Q/8-K), news, social media, central bank minutes | Survey papers | |
-| 43 | Domain adaptation: general LLM vs. financial LLM (FinBERT, BloombergGPT, FinGPT) — when to fine-tune vs. prompt | Araci 2019, Wu et al. 2023, Yang et al. 2023 | |
+| 43 | Domain adaptation: general LLM vs. financial LLM (FinBERT, BloombergGPT, FinGPT) — when to fine-tune vs. prompt. RAG over financial documents as an architectural pattern | Araci 2019, Wu et al. 2023, Yang et al. 2023 | |
 | 44 | Hallucination and reliability: LLMs confidently misinterpret financial jargon ("dovish," "priced in") — detection and mitigation | Project experience | |
 | 45 | Sentiment extraction: lexicon-based vs. LLM-based, domain calibration | FinBERT paper, Financial PhraseBank | |
 | 46 | Event extraction: what happened, to whom, expected impact. Regulatory/structured text parsing | Project experience | |

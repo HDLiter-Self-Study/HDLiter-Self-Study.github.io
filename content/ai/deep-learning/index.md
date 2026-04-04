@@ -18,6 +18,8 @@ Prerequisites: [[ai/machine-learning/index|ML theory]] (at least Phase 1-2) + [[
 ## Resources
 
 ### Theory
+Note: Bach, Bishop², and Telgarsky also appear in the [[ai/machine-learning/index|ML roadmap]] — they bridge both fields.
+
 - **Bach, *Learning Theory from First Principles*** (2024) — rigorous: ERM, kernels, overparameterization, implicit bias. [Free PDF](https://www.di.ens.fr/~fbach/ltfp_book.pdf).
 - **Roberts, Yaida, Hanin, *The Principles of Deep Learning Theory*** (2022) — statistical mechanics approach: Gaussian processes, 1/n expansions, effective theory of deep networks. Requires comfort with statistical physics. [arXiv preprint](https://arxiv.org/abs/2106.10165).
 - **Telgarsky, *Deep Learning Theory*** — online lecture notes (web format, not PDF): approximation, optimization landscape, generalization. [Website](https://mjt.cs.illinois.edu/dlt/).
@@ -75,40 +77,42 @@ Prerequisites: [[ai/machine-learning/index|ML theory]] (at least Phase 1-2) + [[
 | 13 | Transformer architecture: encoder, decoder, positional encoding | Bishop² Ch. 12, CS224n | |
 | 14 | Vision transformers (ViT) and architecture unification | MIT 6.7960 | |
 | 15 | Graph neural networks | Bishop² Ch. 13, CMU 10-708 | |
-| 16 | Normalization, residual connections, and training stabilization | Prince Ch. 11, d2l | |
+| 16 | State-space models (S4, Mamba): alternative to attention for long sequences | MIT 6.7960, Mamba paper | |
+| 17 | Self-supervised learning: contrastive (SimCLR, CLIP) and masked prediction (MAE, BERT) | NYU DL, MIT 6.7960 | |
+| 18 | Normalization, residual connections, and training stabilization | Prince Ch. 11, d2l | |
 
 ### Phase 3: Generative Models
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 17 | Latent variable models and variational autoencoders (VAE) | Bishop² Ch. 20, Murphy vol 2 | |
-| 18 | ELBO, reparameterization trick, amortized inference | PRML Ch. 10, Murphy vol 2 | |
-| 19 | Generative adversarial networks (GAN): theory and training dynamics | Bishop² Ch. 21, Murphy vol 2 | |
-| 20 | Normalizing flows and invertible networks | Murphy vol 2 | |
-| 21 | Score matching and score-based models | MIT 6.S183, KAIST CS492(D) | |
-| 22 | Denoising diffusion probabilistic models (DDPM) | MIT 6.S183, Bishop² Ch. 22 | Links to [[mathematics/analysis/index|stochastic analysis]] |
-| 23 | Diffusion theory: forward/reverse SDE, probability flow ODE | KAIST CS492(D), Murphy vol 2 | |
+| 19 | Latent variable models and variational autoencoders (VAE) | Bishop² Ch. 20, Murphy vol 2 | |
+| 20 | ELBO, reparameterization trick, amortized inference | PRML Ch. 10, Murphy vol 2 | |
+| 21 | Generative adversarial networks (GAN): theory and training dynamics | Bishop² Ch. 21, Murphy vol 2 | |
+| 22 | Normalizing flows and invertible networks | Murphy vol 2 | |
+| 23 | Score matching and score-based models | MIT 6.S183, KAIST CS492(D) | |
+| 24 | Denoising diffusion probabilistic models (DDPM) | MIT 6.S183, Bishop² Ch. 22 | Links to [[mathematics/analysis/index|stochastic analysis]] |
+| 25 | Diffusion theory: forward/reverse SDE, probability flow ODE | KAIST CS492(D), Murphy vol 2 | |
 
 ### Phase 4: Foundation Models & LLM
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 24 | Language modeling: autoregressive, masked | CS224n, CS336 | |
-| 25 | Pre-training: objectives, data, tokenization | CS336 | |
-| 26 | Scaling laws (Chinchilla, compute-optimal) | MIT 6.7960, CS336 | |
-| 27 | In-context learning: what is it, why does it work? | CS229M, MIT 6.7960 | |
-| 28 | RLHF, DPO, and alignment | CS224n (2024), CS336 | Links to [[ai/reinforcement-learning/index|RL]] |
-| 29 | Emergent abilities and reasoning | CS25, MIT 6.7960 | |
-| 30 | Inference optimization: KV cache, quantization, speculative decoding | CS336 | |
-| 31 | Multimodal models and vision-language | CS25 | |
+| 26 | Language modeling: autoregressive, masked | CS224n, CS336 | |
+| 27 | Pre-training: objectives, data, tokenization | CS336 | |
+| 28 | Scaling laws (Chinchilla, compute-optimal) | MIT 6.7960, CS336 | |
+| 29 | In-context learning: what is it, why does it work? | CS229M, MIT 6.7960 | |
+| 30 | RLHF, DPO, and alignment | CS224n (2024), CS336 | Links to [[ai/reinforcement-learning/index|RL]] |
+| 31 | Emergent abilities and reasoning | CS25, MIT 6.7960 | |
+| 32 | Inference optimization: KV cache, quantization, speculative decoding | CS336 | |
+| 33 | Multimodal models and vision-language | CS25 | |
 
 ### Phase 5: Training Engineering
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 32 | Automatic differentiation and computational graphs | CMU 10-714 | |
-| 33 | GPU programming: CUDA, Triton kernels | CS336, CMU 10-714 | |
-| 34 | Operator fusion and memory optimization | CMU 10-714, CMU 11-868 | |
-| 35 | Data parallelism, tensor parallelism, pipeline parallelism | CS336, CMU 11-868 | |
-| 36 | Mixed precision training (fp16, bf16, fp8) | CS336, CMU 11-868 | |
-| 37 | Model compression: quantization, pruning, distillation | CMU 11-868 | |
+| 34 | Automatic differentiation and computational graphs | CMU 10-714 | |
+| 35 | GPU programming: CUDA, Triton kernels | CS336, CMU 10-714 | |
+| 36 | Operator fusion and memory optimization | CMU 10-714, CMU 11-868 | |
+| 37 | Data parallelism, tensor parallelism, pipeline parallelism | CS336, CMU 11-868 | |
+| 38 | Mixed precision training (fp16, bf16, fp8) | CS336, CMU 11-868 | |
+| 39 | Model compression: quantization, pruning, distillation | CMU 11-868 | |
 
 ## Progress
 
