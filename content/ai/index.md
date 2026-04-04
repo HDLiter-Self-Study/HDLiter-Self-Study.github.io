@@ -24,9 +24,9 @@ Machine Learning ──→ Deep Learning ──→ Applications
 ### Mathematical Foundations
 - [[mathematics/linear-algebra/index|Linear Algebra]] · [[mathematics/probability/index|Probability Theory]] · [[mathematics/analysis/index|Real Analysis]] · [[mathematics/information-theory/index|Information Theory]]
 
-### Applications (future)
-- `applications/finance/` — ML + quantitative finance
-- `applications/science/` — AI for science
+### Applications
+- [[finance/index|Finance]] — macro, systematic strategies, LLM + finance
+- `applications/science/` — AI for science (future)
 
 ## Dependency Map
 
@@ -42,5 +42,5 @@ Real Analysis ──→ Measure Theory ─┘                          │
                                                              │
 RL Foundations ──→ Deep RL ──→ RLHF ─────────────────────────┘
                                 │
-                          Applications (finance, science, ...)
+                          Finance (separate roadmap), AI for science, ...
 ```
