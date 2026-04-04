@@ -1,7 +1,7 @@
 ---
 title: Probability Theory
 date: 2026-04-02
-lastmod: 2026-04-02
+lastmod: 2026-04-03
 tags:
   - mathematics
   - probability
@@ -23,7 +23,7 @@ Prerequisites: [[mathematics/analysis/index|real analysis]] (especially Phase 4:
 - **Bertsekas & Tsitsiklis, *Introduction to Probability* (2nd ed.)** — MIT 6.041 textbook, more compact and engineering-flavored. Alternative to Blitzstein for review.
 
 ### Primary (measure-theoretic)
-- **Williams, *Probability with Martingales*** — concise (~250 pp), builds measure theory and probability together, reaches martingales quickly. Best transition from analysis to probability for self-study.
+- **Williams, *Probability with Martingales*** — concise (~250 pp), builds measure theory and probability together, reaches martingales quickly. Best transition from analysis to probability for self-study. **Note:** Williams' measure theory coverage is compact (~40 pp) — pair with [[mathematics/analysis/index|Analysis Phase 4]] (Lebesgue integration) for a solid foundation.
 
 ### Statistical Inference
 - **Wasserman, *All of Statistics*** — one-volume graduate statistics: MLE, hypothesis testing, Bayesian inference, regression, causal inference. Bridge between probability theory and ML.
@@ -44,6 +44,8 @@ Prerequisites: [[mathematics/analysis/index|real analysis]] (especially Phase 4:
 Organized by concept. Phase 0 is review; Phases 1–3 are new material.
 
 ### Phase 0: Undergraduate Review (2–3 weeks, fast pass)
+
+> **Fast pass criterion:** if you can solve end-of-chapter exercises in Blitzstein Ch. 1-3 within 30 min per chapter, proceed to Phase 1. If not, budget 4-5 weeks.
 | # | Concept | Blitzstein | Stat 110 | Concept Notes |
 |---|---------|-----------|----------|---------------|
 | 1 | Counting, sample spaces, axioms of probability | Ch. 1 | Lec 1–3 | |
@@ -73,15 +75,15 @@ Organized by concept. Phase 0 is review; Phases 1–3 are new material.
 | 17 | Central limit theorem (rigorous proof) | Ch. 13 | Ch. 3 | |
 | 18 | Large deviations (introduction) | | Durrett Ch. 2 | |
 
-### Phase 3: Conditional Expectation and Martingales
+### Phase 3: Radon-Nikodym, Conditional Expectation, and Martingales
 | # | Concept | Williams | Durrett | Concept Notes |
 |---|---------|---------|--------|---------------|
-| 19 | Conditional expectation (measure-theoretic) | Ch. 9 | Ch. 5 | |
-| 20 | Martingales: definition and examples | Ch. 10 | Ch. 5 | |
-| 21 | Optional stopping theorem | Ch. 10 | Ch. 5 | |
-| 22 | Martingale convergence theorems | Ch. 11 | Ch. 5 | |
-| 23 | Uniform integrability | Ch. 12 | Ch. 5 | |
-| 24 | Radon-Nikodym theorem and density | Ch. 14 | Ch. 5 | |
+| 19 | Radon-Nikodym theorem and density | Ch. 14 | Ch. 5 | Foundation for conditional expectation and density ratios (importance sampling, KL divergence) |
+| 20 | Conditional expectation (measure-theoretic) | Ch. 9 | Ch. 5 | Defined via Radon-Nikodym (Item 19). Links to regression, Bayesian updating |
+| 21 | Martingales: definition and examples | Ch. 10 | Ch. 5 | |
+| 22 | Optional stopping theorem | Ch. 10 | Ch. 5 | |
+| 23 | Martingale convergence theorems | Ch. 11 | Ch. 5 | |
+| 24 | Uniform integrability | Ch. 12 | Ch. 5 | |
 
 ### Phase 4: Statistical Inference
 | # | Concept | Sources | Concept Notes |
@@ -98,10 +100,28 @@ Organized by concept. Phase 0 is review; Phases 1–3 are new material.
 ### Phase 5 (Future): Toward ML Theory
 | # | Concept | Source | Concept Notes |
 |---|---------|--------|---------------|
-| 33 | Markov chains | Durrett Ch. 6 | |
+| 33 | Markov chains | Durrett Ch. 6 | Also prerequisite for [[ai/reinforcement-learning/index|RL]]: MDP is a controlled Markov chain. See Phase 6 for continuous-time limit |
 | 34 | Concentration inequalities (Hoeffding, McDiarmid, sub-Gaussian) | Wainwright Ch. 2 | |
 | 35 | Random matrices and covariance estimation | Wainwright Ch. 6 | |
 | 36 | Empirical processes, VC dimension | Wainwright Ch. 4, → [[ai/machine-learning/index|ML theory]] | |
+
+### Phase 6 (Future): Stochastic Calculus
+| # | Concept | Source | Concept Notes |
+|---|---------|--------|---------------|
+| 37 | Brownian motion and continuous-time processes | Øksendal Ch. 2-3 | |
+| 38 | Itô integral and Itô's formula | Øksendal Ch. 4 | |
+| 39 | Stochastic differential equations | Øksendal Ch. 5 | Links to [[ai/deep-learning/index|DL Phase 3]]: diffusion models (Score SDE, DDPM continuous limit) |
+| 40 | Girsanov theorem and change of measure (optional for DL — mainly serves finance / risk-neutral pricing) | Øksendal Ch. 8, Shreve Ch. 5 | Girsanov = Radon-Nikodym theorem for Wiener measure (cf. Phase 3 Item 19) |
+| 41 | Fokker-Planck and Kolmogorov equations | Øksendal Ch. 8 | Connects to Langevin dynamics (MCMC) |
+
+> **When to start:** after Phase 3 (martingales) + familiarity with DL Phase 3 (diffusion models). Direct applications: diffusion model theory, Langevin MCMC, quantitative finance (Black-Scholes).
+
+**Resources:**
+- **Øksendal, *Stochastic Differential Equations* (6th ed., 2003)** — the standard first book. Rigorous but readable, ~330 pp, includes exercise solutions. Assumes measure-theoretic probability.
+- **Shreve, *Stochastic Calculus for Finance II* (2004)** — finance-focused. Use selectively (Ch. 4-6 for Black-Scholes, Ch. 11 for stochastic volatility).
+- **Baldi, *Stochastic Calculus: An Introduction Through Theory and Exercises* (2017)** — 200+ exercises with solutions. Best drill complement to Øksendal.
+- **MIT 6.S184: Generative AI with SDEs** (2025-2026) — teaches SDE theory specifically for diffusion models. [diffusion.csail.mit.edu](https://diffusion.csail.mit.edu/2026/index.html). **Best bridge between this phase and DL Phase 3.**
+- **Tang & Zhao, *Score-based Diffusion Models via SDEs*** (2024, [arXiv:2402.07487](https://arxiv.org/abs/2402.07487)) — tutorial bridging SDE theory and diffusion/score-matching models.
 
 ## AI Relevance
 
@@ -126,3 +146,4 @@ Organized by concept. Phase 0 is review; Phases 1–3 are new material.
 - [ ] Phase 3: Conditional Expectation and Martingales
 - [ ] Phase 4: Statistical Inference
 - [ ] Phase 5: Toward ML Theory
+- [ ] Phase 6: Stochastic Calculus

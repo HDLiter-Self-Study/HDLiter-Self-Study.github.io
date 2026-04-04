@@ -1,7 +1,7 @@
 ---
 title: Set Theory & Logic
 date: 2026-04-02
-lastmod: 2026-04-02
+lastmod: 2026-04-03
 tags:
   - mathematics
   - logic
@@ -64,7 +64,7 @@ A rigorous study of the logical and set-theoretic foundations that underpin mode
 | 9 | Ordinal numbers, transfinite induction | Ch. 7 | | |
 | 10 | Cardinal numbers and their arithmetic | Ch. 6, 8 | | |
 | 11 | Axiom of choice and equivalents | Ch. 6 | | |
-| 12 | Construction of the real numbers | Ch. 5 | | |
+| 12 | Construction of the real numbers | Ch. 5 | | ZFC formalization of Analysis Phase 1 content — do after Analysis Phase 1, not in parallel |
 
 ### Phase 2: Incompleteness & Computability (parallel to Analysis Phase 2–3)
 | # | Topic | Source | Concept Notes |
@@ -76,12 +76,14 @@ A rigorous study of the logical and set-theoretic foundations that underpin mode
 | 17 | Gödel's second incompleteness theorem | Smith | |
 | 18 | Undecidability results | BBJ | |
 
-### Phase 3: Advanced Set Theory (after Analysis)
+### Phase 3: Advanced Set Theory (Optional — no AI relevance, pursue only if independence proofs become a personal interest)
 | # | Topic | Source | Concept Notes |
 |---|-------|--------|---------------|
 | 19 | Constructible universe (L) | Kunen | |
 | 20 | Forcing | Kunen | |
 | 21 | Independence of CH and AC | Kunen | |
+
+> **Note:** This phase covers PhD-level pure mathematics (forcing alone requires months to years). It has zero connection to ML/AI or other parts of this vault. Defer indefinitely unless AI-for-math (AlphaProof, Lean 4 formalization of set theory) becomes a primary research direction.
 
 ## Progress
 

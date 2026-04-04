@@ -1,7 +1,7 @@
 ---
 title: Machine Learning
 date: 2026-04-02
-lastmod: 2026-04-02
+lastmod: 2026-04-03
 tags:
   - ai
   - machine-learning
@@ -88,7 +88,7 @@ Organized by fundamental questions, not by book chapter. Each concept draws from
 | 18 | Expectation-Maximization algorithm | PRML Ch. 9, ESL Ch. 8 | |
 | 19 | Variational inference | PRML Ch. 10, Murphy vol 2 | |
 | 20 | MCMC and sampling methods | PRML Ch. 11, MacKay Ch. 29–30, Murphy vol 2 | |
-| 21 | Information-theoretic view: KL divergence, maximum entropy, MDL | MacKay Ch. 4, 28 | |
+| 21 | Information-theoretic view: KL divergence, maximum entropy, MDL | MacKay Ch. 4, 28 | Links to [[mathematics/information-theory/index|information theory]] |
 
 ### Phase 5: Optimization for ML
 | # | Concept | Sources | Concept Notes |
@@ -106,6 +106,18 @@ Organized by fundamental questions, not by book chapter. Each concept draws from
 
 → Deep learning theory, architectures, and generative models continue in [[ai/deep-learning/index|Deep Learning]].
 → Sequential decision-making continues in [[ai/reinforcement-learning/index|Reinforcement Learning]].
+→ Phase 6 (Online Learning) is a direct prerequisite for [[ai/reinforcement-learning/index|RL Phase 4]] (regret bounds for bandits).
+
+## Practice Checkpoints
+
+> After each theory phase, pick a project that exercises the concepts ([[ai/principles|AI Principles: Two-Track Approach]]).
+
+| After Phase | Checkpoint |
+|-------------|-----------|
+| Phase 2 | Implement ERM with finite hypothesis class from scratch (numpy only). Verify: test error obeys the generalization bound you derived |
+| Phase 3 | Implement linear regression, logistic regression, and kernel SVM from scratch. Compare with scikit-learn on a real dataset — explain any discrepancies |
+| Phase 4 | Implement EM for Gaussian mixture model. Implement variational inference for a simple model. Compare convergence behavior |
+| Phase 5 | Implement SGD with various learning rate schedules. Plot convergence on a non-convex toy problem. Verify theoretical rates |
 
 ## Suggested Sequencing
 

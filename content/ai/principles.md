@@ -112,6 +112,38 @@ Reverse index of [[mathematics/principles|Mathematics Learning Principles]] → 
 
 Don't front-load all the math. Learn it just-in-time: start an AI phase, hit a wall, go learn the math, come back.
 
+## AI Concept Mastery Criteria
+
+Adapted from [[principles|general learning principles]] "When to Move On" for AI-specific content. A concept is done when you can answer YES to at least 2 of:
+
+1. **Explain without notes:** state the core idea, the key assumption, and one thing that breaks if the assumption fails
+2. **Derive the key result:** reproduce the main theorem/algorithm derivation without looking
+3. **Implement from scratch:** produce working code at numpy/pseudocode level (where applicable)
+4. **Connect:** link it to at least one concept in a different Phase or subject
+5. **Critique:** identify one real-world scenario where this method would fail and why
+
+Practice Checkpoints (in each roadmap) verify integrated, hands-on understanding. For individual concepts, aim for at least 1 criterion (theoretical concepts) or 2 criteria (method-level concepts) before moving on. Completing a checkpoint does NOT mean every concept in that Phase is mastered — use the criteria above to check each concept that later Phases depend on.
+
+## Review Cadence
+
+- After completing each Phase, schedule one review session for the previous Phase's key concepts before going deep into the new one.
+- At the end of each month, pick the 3-5 most-depended-on concepts from that month's work (e.g., generalization bounds, Bellman equation, attention mechanism) and write one sentence each: "what would break if I assumed this was false?"
+- A concept you can't quickly explain 4 weeks after learning it was never consolidated — it needs a dedicated session, not a skim.
+- Record review outcomes in [[ai/learning-log|AI Learning Log]].
+
+## Paper-to-Note Pipeline
+
+After [[#Paper reading triage|triaging]] a paper, use this workflow to convert reading into durable knowledge:
+
+1. **Read abstract + intro:** what problem, what claim?
+2. **Read conclusion + figures:** what was actually shown?
+3. **Find the one key equation or algorithm** (usually 1-3 per paper)
+4. **Derive it yourself** or identify exactly where you can't follow
+5. **Write a concept note only for the idea that generalizes beyond this paper** — don't transcribe the paper
+6. **Record in [[ai/learning-log|learning log]]:** what mental model did this update?
+
+Not every paper gets all steps — the triage level determines depth. But step 6 (logging the mental model update) applies even to 15-minute incremental reads.
+
 ## Engineering Experience: The Decay Problem
 
 AI engineering knowledge has a half-life measured in months. Frameworks change, best practices get superseded, hardware shifts the tradeoff landscape. Strategy:

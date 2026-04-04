@@ -1,7 +1,7 @@
 ---
 title: Reinforcement Learning
 date: 2026-04-02
-lastmod: 2026-04-02
+lastmod: 2026-04-03
 tags:
   - ai
   - reinforcement-learning
@@ -13,7 +13,7 @@ draft: false
 
 Reinforcement learning as a separate paradigm from supervised/unsupervised learning: sequential decision-making under uncertainty. From tabular foundations through deep RL to modern applications (RLHF, game-playing, robotics).
 
-Prerequisites: [[mathematics/probability/index|probability theory]] (at least Phase 1) + [[mathematics/linear-algebra/index|linear algebra]]. For Phase 4 (theory): [[ai/machine-learning/index|ML theory]] Phase 2 (generalization bounds).
+Prerequisites: [[mathematics/probability/index|probability theory]] (at least Phase 2 — policy gradient proofs require conditional expectation and importance sampling) + [[mathematics/linear-algebra/index|linear algebra]]. For Phase 4 (theory): [[ai/machine-learning/index|ML theory]] Phase 2 (generalization bounds) + Phase 6 (online learning / regret framework).
 
 ## Resources
 
@@ -65,7 +65,7 @@ Prerequisites: [[mathematics/probability/index|probability theory]] (at least Ph
 | 15 | Offline / batch RL: CQL, IQL, decision transformer | CS285, CS234 (2024) | |
 | 16 | Inverse RL and reward learning | CS285 | |
 | 17 | RLHF and direct preference optimization (DPO) | CS234 (2024), CS336 | Links to [[ai/deep-learning/index|DL Phase 4]] |
-| 18 | Multi-agent RL (introduction) | DeepMind 2021 | |
+| 18 | Multi-agent RL (introduction, optional — weak connection to LLM+Finance) | DeepMind 2021, Foerster et al. (QMIX, MAPPO) | |
 
 ### Phase 4: Theory
 | # | Concept | Sources | Concept Notes |
@@ -76,9 +76,17 @@ Prerequisites: [[mathematics/probability/index|probability theory]] (at least Ph
 | 22 | Regret bounds for bandits (stochastic and adversarial) | Lattimore Ch. 4-12 | |
 | 23 | Contextual bandits and linear bandits | Lattimore Ch. 18-22 | |
 
+## Practice Checkpoints
+
+| After Phase | Checkpoint |
+|-------------|-----------|
+| Phase 1 | Implement Q-learning and SARSA on a gridworld. Visualize value function evolution |
+| Phase 2 | Implement DQN on Atari (or CartPole). Implement PPO on a continuous control task |
+| Phase 3 | Implement a simple RLHF pipeline: train a reward model, then optimize a small LM against it |
+
 ## Progress
 
 - [ ] Phase 1: Foundations
 - [ ] Phase 2: Function Approximation and Deep RL
 - [ ] Phase 3: Advanced Methods
-- [ ] Phase 4: Theory
+- [ ] Phase 4: Theory (optional depth — not on the critical path for LLM+Finance)

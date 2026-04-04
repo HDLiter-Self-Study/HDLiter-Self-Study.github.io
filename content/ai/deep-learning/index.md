@@ -1,7 +1,7 @@
 ---
 title: Deep Learning
 date: 2026-04-02
-lastmod: 2026-04-02
+lastmod: 2026-04-03
 tags:
   - ai
   - deep-learning
@@ -65,8 +65,8 @@ Note: Bach, Bishop², and Telgarsky also appear in the [[ai/machine-learning/ind
 | 5 | Neural tangent kernel (NTK) and lazy training regime | Bach Ch. 7, CS229M | |
 | 6 | Overparameterization, interpolation, double descent | Bach Ch. 8, Telgarsky | |
 | 7 | Generalization in overparameterized models | Bach Ch. 8-9, Telgarsky | |
-| 8 | Statistical mechanics of deep networks: Gaussian process limit, 1/n corrections | Roberts Ch. 1-7 | Requires [[physics]] stat mech |
-| 9 | Effective theory of deep networks at finite width | Roberts Ch. 8-11 | |
+| 8 | Statistical mechanics of deep networks: Gaussian process limit, 1/n corrections | Roberts Ch. 1-7 | [Optional / research-track] Requires stat mech background. Revisit after Phase 4 if pursuing DL theory research |
+| 9 | Effective theory of deep networks at finite width | Roberts Ch. 8-11 | [Optional / research-track] Same as above |
 
 ### Phase 2: Architectures (Deep Dive)
 | # | Concept | Sources | Concept Notes |
@@ -74,18 +74,18 @@ Note: Bach, Bishop², and Telgarsky also appear in the [[ai/machine-learning/ind
 | 10 | Convolutional networks: equivariance, receptive fields, architecture design | Bishop² Ch. 10-11, Michigan 498 | |
 | 11 | Recurrent networks and the vanishing gradient problem | Bishop² Ch. 12 | |
 | 12 | Attention mechanism: scaled dot-product, multi-head | Bishop² Ch. 12, CS224n | |
-| 13 | Transformer architecture: encoder, decoder, positional encoding | Bishop² Ch. 12, CS224n | |
+| 13 | Transformer architecture: encoder, decoder, positional encoding (incl. RoPE, context extension methods like YaRN) | Bishop² Ch. 12, CS224n, CS336 | |
 | 14 | Vision transformers (ViT) and architecture unification | MIT 6.7960 | |
 | 15 | Graph neural networks | Bishop² Ch. 13, CMU 10-708 | |
-| 16 | State-space models (S4, Mamba): alternative to attention for long sequences | MIT 6.7960, Mamba paper | |
-| 17 | Self-supervised learning: contrastive (SimCLR, CLIP) and masked prediction (MAE, BERT) | NYU DL, MIT 6.7960 | |
+| 16 | State-space models and hybrid architectures (S4, Mamba, Jamba): long-sequence modeling, still evolving — not a first-priority learning target | MIT 6.7960, Mamba paper | |
+| 17 | Self-supervised learning: contrastive (SimCLR, CLIP) and masked prediction (MAE, BERT) | NYU DL, MIT 6.7960 | InfoNCE links to [[mathematics/information-theory/index|information theory]] (mutual information) |
 | 18 | Normalization, residual connections, and training stabilization | Prince Ch. 11, d2l | |
 
 ### Phase 3: Generative Models
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
 | 19 | Latent variable models and variational autoencoders (VAE) | Bishop² Ch. 20, Murphy vol 2 | |
-| 20 | ELBO, reparameterization trick, amortized inference | PRML Ch. 10, Murphy vol 2 | |
+| 20 | ELBO, reparameterization trick, amortized inference | PRML Ch. 10, Murphy vol 2 | Links to [[mathematics/information-theory/index|information theory]] (KL divergence) |
 | 21 | Generative adversarial networks (GAN): theory and training dynamics | Bishop² Ch. 21, Murphy vol 2 | |
 | 22 | Normalizing flows and invertible networks | Murphy vol 2 | |
 | 23 | Score matching and score-based models | MIT 6.S183, KAIST CS492(D) | |
@@ -93,26 +93,52 @@ Note: Bach, Bishop², and Telgarsky also appear in the [[ai/machine-learning/ind
 | 25 | Diffusion theory: forward/reverse SDE, probability flow ODE | KAIST CS492(D), Murphy vol 2 | |
 
 ### Phase 4: Foundation Models & LLM
+
+> **Internal grouping** (items are numbered sequentially but don't need to be studied top-to-bottom):
+> - **Core (26-29):** language modeling fundamentals, scaling, ICL
+> - **Alignment pipeline (read in order: 30→31):** SFT *then* RLHF/DPO
+> - **Architecture advances (32-34):** MoE, test-time compute, emergent abilities
+> - **Inference & multimodal (35-36):** optimization, vision-language
+> - **Applications (37-40):** RAG, agents, structured output, evaluation — **37-39 are highest priority for LLM+Finance**
+
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
 | 26 | Language modeling: autoregressive, masked | CS224n, CS336 | |
 | 27 | Pre-training: objectives, data, tokenization | CS336 | |
 | 28 | Scaling laws (Chinchilla, compute-optimal) | MIT 6.7960, CS336 | |
 | 29 | In-context learning: what is it, why does it work? | CS229M, MIT 6.7960 | |
-| 30 | RLHF, DPO, and alignment | CS224n (2024), CS336 | Links to [[ai/reinforcement-learning/index|RL]] |
-| 31 | Emergent abilities and reasoning | CS25, MIT 6.7960 | |
-| 32 | Inference optimization: KV cache, quantization, speculative decoding | CS336 | |
-| 33 | Multimodal models and vision-language | CS25 | |
+| 30 | Instruction tuning and supervised fine-tuning (SFT): data curation, format design | CMU 11-667, Wei et al. (FLAN, 2022), Chung et al. (Flan-T5, 2022), Zhou et al. (LIMA, 2023) | **Study before #31.** LIMA: 1K curated examples can match 50K+ |
+| 31 | RLHF, DPO, and alignment | CS224n (2024), CS336 | Links to [[ai/reinforcement-learning/index|RL Phase 3]]. **Requires RL Phase 2** (policy gradient, PPO). RL Phase 3 covers RLHF from the RL side — read together |
+| 32 | Mixture of Experts (MoE): sparse gating, Mixtral, DeepSeek-MoE | Fedus et al. (Switch Transformer, 2022), Jiang et al. (Mixtral, 2024), Dai et al. (DeepSeek-MoE, 2024) | Now a mainstream LLM architecture option |
+| 33 | Test-time compute and inference-time reasoning: chain-of-thought, process reward models | Snell et al. (test-time compute scaling, 2024), Lightman et al. (PRM, 2023) | Major 2024-2025 paradigm shift |
+| 34 | Emergent abilities, reasoning, and RL-based long-chain reasoning | CS25, MIT 6.7960, DeepSeek-R1 (2025, GRPO-trained reasoning) | DeepSeek-R1 uses RL (GRPO), not MCTS. MCTS-based: AlphaCode 2, rStar |
+| 35 | Inference optimization: KV cache, quantization, speculative decoding | CS336 | |
+| 36 | Multimodal models and vision-language: CLIP alignment, Flamingo, LLaVA, GPT-4V lineage | CS25 (ongoing), CMU 11-777 | |
+| 37 | Retrieval-augmented generation (RAG): dense retrieval (DPR, bi-encoders vs cross-encoders), RAG architectures, advanced RAG (re-ranking, query expansion) | Lewis et al. (RAG, 2020), Gao et al. (RAG survey, 2024), CMU 11-868 | **LLM+Finance critical:** retrieval over 10-K, earnings calls |
+| 38 | AI agents and agentic architectures: ReAct, tool use / function calling, multi-step planning, memory systems | Yao et al. (ReAct, 2023), Xi et al. (LLM agents survey, Fudan, 2023), Yang et al. (SWE-agent, 2024) | **LLM+Finance critical.** See also: MCP, LangGraph for orchestration |
+| 39 | Structured / constrained generation: JSON mode, grammar-constrained decoding, schema enforcement | Willard & Louf (Outlines, 2023), OpenAI structured outputs docs | **LLM+Finance critical:** extracting structured data from 10-K filings |
+| 40 | LLM evaluation methodology: automatic metrics limitations, LLM-as-judge biases (position, verbosity, self-enhancement), human eval, benchmark contamination | Zheng et al. (MT-Bench + Chatbot Arena, 2023), Liang et al. (HELM, 2023), CMU 11-667 | |
 
 ### Phase 5: Training Engineering
 | # | Concept | Sources | Concept Notes |
 |---|---------|---------|---------------|
-| 34 | Automatic differentiation and computational graphs | CMU 10-714 | |
-| 35 | GPU programming: CUDA, Triton kernels | CS336, CMU 10-714 | |
-| 36 | Operator fusion and memory optimization | CMU 10-714, CMU 11-868 | |
-| 37 | Data parallelism, tensor parallelism, pipeline parallelism | CS336, CMU 11-868 | |
-| 38 | Mixed precision training (fp16, bf16, fp8) | CS336, CMU 11-868 | |
-| 39 | Model compression: quantization, pruning, distillation | CMU 11-868 | |
+| 41 | Automatic differentiation and computational graphs | CMU 10-714 | |
+| 42 | GPU programming: CUDA, Triton kernels | CS336, CMU 10-714 | |
+| 43 | Operator fusion and memory optimization | CMU 10-714, CMU 11-868 | |
+| 44 | Data parallelism, tensor parallelism, pipeline parallelism | CS336, CMU 11-868 | |
+| 45 | Mixed precision training (fp16, bf16, fp8) | CS336, CMU 11-868 | |
+| 46 | Model compression: quantization, pruning, distillation | CMU 11-868 | |
+
+## Practice Checkpoints
+
+| After Phase | Checkpoint |
+|-------------|-----------|
+| Phase 1 | On a simple two-layer network, experimentally demonstrate double descent. Explain wide-network behavior from the NTK perspective |
+| Phase 2 | Train a Transformer from scratch on a small language modeling task (tiny Shakespeare or WikiText-2). Must write the attention mechanism yourself |
+| Phase 3 | Implement VAE or DDPM from scratch. Generate samples, evaluate quality, ablate components |
+| Phase 4a (concepts 26-31) | Fine-tune an open-weight LLM with SFT on a downstream task. Evaluate rigorously (not just vibes) |
+| Phase 4b (concepts 37-39) | Build a RAG pipeline for LLM+Finance: retrieve from real documents (10-K or earnings calls), generate answers, evaluate with structured metrics |
+| Phase 5 | Write a custom CUDA/Triton kernel for a matrix operation. Profile and compare with PyTorch |
 
 ## Progress
 
