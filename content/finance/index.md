@@ -31,9 +31,9 @@ See [[finance/principles|Finance Learning Principles]] for domain-specific metho
 ### Economic Thinking
 | Resource | Type | Focus | Available? |
 |----------|------|-------|------------|
-| **Varian, *Intermediate Microeconomics*** (9th ed.) | Textbook | Incentives, game theory, information asymmetry, mechanism design — read selectively | Buy or reference |
-| **Kahneman, *Thinking, Fast and Slow*** (2011) | Book | Systematic cognitive biases: prospect theory, framing, overconfidence, anchoring | Buy |
-| **Acemoglu & Robinson, *Why Nations Fail*** (2012) | Book | Institutions as drivers of economic outcomes — complements Dalio's macro framework | Buy |
+| **Dixit & Nalebuff, *The Art of Strategy*** (2008) | Book | Game-theoretic thinking applied to real decisions: commitment, signaling, repeated games, mechanism design | `books/` |
+| **Kahneman, *Thinking, Fast and Slow*** (2011) | Book | Systematic cognitive biases: prospect theory, framing, overconfidence, anchoring | `books/` |
+| **Acemoglu & Robinson, *Why Nations Fail*** (2012) | Book | Institutions as drivers of economic outcomes — complements Dalio's macro framework | `books/` |
 
 ### Market Microstructure & Trading
 | Resource | Type | Focus | Available? |
@@ -102,8 +102,8 @@ See [[finance/principles|Finance Learning Principles]] for domain-specific metho
 |---|---------|---------|---------------|
 | 10 | Asset classes: equities, fixed income, FX, commodities — what drives each | MIT 15.401, Harris | |
 | 11 | Market microstructure: order books, bid-ask spread, liquidity, market impact | Harris Ch. 1-12 | |
-| 12 | Incentives and information asymmetry: adverse selection, moral hazard, signaling — why market participants behave the way they do | Varian (selected chapters) | |
-| 13 | Game-theoretic reasoning: Nash equilibrium, repeated games, mechanism design — central bank vs. market as a repeated game | Varian (selected chapters) | |
+| 12 | Incentives and information asymmetry: adverse selection, moral hazard, signaling — why market participants behave the way they do | Dixit & Nalebuff, Mankiw micro | |
+| 13 | Game-theoretic reasoning: Nash equilibrium, repeated games, mechanism design — central bank vs. market as a repeated game | Dixit & Nalebuff, Mankiw micro | |
 | 14 | Efficient market hypothesis and its limits | MIT 15.401, Shiller | |
 | 15 | Systematic cognitive biases: prospect theory, loss aversion, overconfidence, anchoring — when and why markets are irrational | Kahneman, Shiller | |
 | 16 | Risk and return: volatility, drawdown, Sharpe ratio, fat tails | Cochrane Asset Pricing Ch. 1 | |
